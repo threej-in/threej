@@ -14,16 +14,13 @@ class threej extends threejdb{
     public 
     
     function __construct() {
-        if(session_status() < 2) session_start();
-        
-        if(DEBUGGING){
-            error_reporting(E_ALL);
-        }else{
-            error_reporting(0);
-        }
-        $this->captcha = new \Gregwar\Captcha\CaptchaBuilder();
         $this->salt = $GLOBALS['SALT'];
-        
+        if(session_status() < 2) session_start();
+        //error reporting
+        DEBUGGING ? error_reporting(E_ALL) : error_reporting(0);
+        //intiate captcha class
+        if(extension_loaded('gd')) $this->captcha = new \Gregwar\Captcha\CaptchaBuilder();
+        //initiate new db class
         if(false === $this->newDatabaseConnection()){
             $this->error($this->dberror,'Database connection failed');
             die;
