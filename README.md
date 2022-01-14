@@ -13,5 +13,6 @@ light weight php library consisting common useful functions
 
 ### List of available functions
 - $t->print() - Fixed Preformatted div for better debugging.
-- $t->getCaptcha() - Gives base64 string to use in src attribute of img tag.
+- $t->getCaptcha() - Gives base64 string to use in src attribute of img tag. 
+  - Note - GD extension is required for captchas to work.
 - $t->validateCaptcha() - validates the captcha stored in session with the phrase entered by user.
