@@ -1,2 +1,2 @@
-# threej
-light weight php library consist of common useful functions
+# threeJ
+light weight php library consisting common useful functions
