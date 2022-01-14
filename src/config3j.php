@@ -15,7 +15,7 @@
     //specify server name
     $SERVER = $_SERVER['SERVER_NAME'];
     //specify database name
-    $DATABASE = 'bbvs';
+    $DATABASE = '';
     //Enter db username
     $DBUSER = 'root';
     //Enter db password
